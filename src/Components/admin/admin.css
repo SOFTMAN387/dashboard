@@ -22,9 +22,22 @@
     border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+.SideMenu {
+    height: 100%;
+    background-color: black;
+}
+
+.SideMenuVertical {
+    height: 100%;
+}
+
 .SideMenuAndPageContent {
     display: flex;
     flex: 1;
     justify-content: flex-start;
     align-items: flex-start;
+}
+
+.PageContent {
+    padding-left: 12px;
 }

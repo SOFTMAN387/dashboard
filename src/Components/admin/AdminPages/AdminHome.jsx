@@ -1,6 +1,7 @@
 import { DollarCircleOutlined, OrderedListOutlined, ShopOutlined, UserOutlined } from '@ant-design/icons';
 import { Space, Typography,Card, Statistic } from 'antd';
-import React from 'react'
+import React from 'react';
+
 
 const AdminHome = () => {
   return (
@@ -43,7 +44,6 @@ const AdminHome = () => {
          }} />}title={"Revenue"} value={12345} />
         </Space>
        
-
         
       
     </div>

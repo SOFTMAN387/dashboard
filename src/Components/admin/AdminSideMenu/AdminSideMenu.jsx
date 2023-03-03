@@ -2,12 +2,13 @@ import { AppstoreAddOutlined, ShopOutlined, ShoppingCartOutlined, UserAddOutline
 import { Menu } from 'antd'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import "../admin.css";
 const AdminSideMenu = () => {
   const navigate = useNavigate();
   return (
-    <div className='AdminSideMenu'>
+    <div className='SideMenu' >
       <Menu
+        className="SideMenuVertical"
         onClick={(item) => {
           navigate(item.key);
 
