@@ -8,12 +8,12 @@ const Header = () => {
         <Image width={40}
           src=""
         > </Image>
-        <Typography.Title>SoftMan DashBoard</Typography.Title>
+        <Typography.Text level={4}>SoftMan DashBoard</Typography.Text>
         <Space >
-        <Badge count={10}  >
+        <Badge  dot >
           <MailOutlined style={{fotSize:24}} />
         </Badge>
-        <Badge dot>
+        <Badge  count={10} >
         <BellFilled style={{fotSize:24}} />
         </Badge>
          

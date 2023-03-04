@@ -13,10 +13,11 @@ function AdminRoutes() {
 
       <Routes>
         {/* <Route exact path="/" element={<Home />} /> */}
+
         <Route exact path="/dashboard" element={<AdminIndex />} />
-      <Route exact path="/dashboard/users" element={<Users />} />
-      <Route exact path="/dashboard/products" element={<Products />} />
-      <Route exact path="/dashboard/orders" element={<Orders />} />
+        <Route exact path="/dashboard/users" element={<Users />} />
+        <Route exact path="/dashboard/products" element={<Products />} />
+        <Route exact path="/dashboard/orders" element={<Orders />} />
       </Routes>
     </>
   );

@@ -1,6 +1,28 @@
 import { DollarCircleOutlined, OrderedListOutlined, ShopOutlined, UserOutlined } from '@ant-design/icons';
 import { Space, Typography,Card, Statistic } from 'antd';
 import React from 'react';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+// import faker from 'faker';
+
+
+ChartJS.register(
+   CategoryScale,
+   LinearScale,
+   BarElement,
+   Title,
+   Tooltip,
+   Legend
+ );
+ 
 
 
 const AdminHome = () => {
@@ -16,7 +38,7 @@ const AdminHome = () => {
             borderRadius:20,
             fontSize:24,
             padding:8
-         }}/>} title={"Customers"} value={12345} />
+         }}/>} title={"Customers"} value={305} />
          <DashboardCard icon={<OrderedListOutlined 
             style={{
             color:"purple",
@@ -25,7 +47,7 @@ const AdminHome = () => {
             fontSize:24,
             padding:8
          }}
-         />}title={"Orders"} value={12345} />
+         />}title={"Orders"} value={13} />
          <DashboardCard icon={<ShopOutlined
          style={{
             color:"yellow",
@@ -33,7 +55,7 @@ const AdminHome = () => {
             borderRadius:20,
             fontSize:24,
             padding:8
-         }} />} title={"Products"} value={12345} />
+         }} />} title={"Products"} value={105} />
          <DashboardCard icon={<DollarCircleOutlined
          style={{
             color:"red",
@@ -41,9 +63,13 @@ const AdminHome = () => {
             borderRadius:20,
             fontSize:24,
             padding:8
-         }} />}title={"Revenue"} value={12345} />
+         }} />}title={"Revenue"} value={25000} />
         </Space>
        
+         <Card style={{height:"300px",width:"600px"}}>
+         <AdminChrtjs />
+         </Card>
+      
         
       
     </div>
@@ -51,6 +77,38 @@ const AdminHome = () => {
   )
 }
 
+
+function AdminChrtjs(){
+   const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+   const data = {
+      labels,
+      datasets: [
+        {
+          label: 'Dataset 1',
+          data: labels.map(() => Math.random()*100),
+          backgroundColor: 'rgba(255, 99, 132, 0.5)',
+        },
+        {
+          label: 'Dataset 2',
+          data: labels.map(() => Math.random()*100),
+          backgroundColor: 'rgba(53, 162, 235, 0.5)',
+        },
+      ],
+    };
+   const options = {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'bottom' ,
+        },
+        title: {
+          display: true,
+          text: 'Orders Revenue',
+        },
+      },
+    };
+   return <Bar options={options} data={data} />
+}
 function DashboardCard({title,value,icon}){
     return(
         <Card>
