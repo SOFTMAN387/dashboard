@@ -11,11 +11,13 @@ const Users = () => {
       <AdminHeader />
       <Space className="SideMenuAndPageContent">
         <AdminSideMenu />
-       <User />
+        <User />
 
       </Space>
 
-      <AdminFooter />
+      <div className="admin_Footer">
+        <AdminFooter />
+      </div>
     </div>
   </>
 

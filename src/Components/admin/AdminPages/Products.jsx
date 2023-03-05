@@ -15,7 +15,9 @@ const Products = () => {
 
       </Space>
 
-      <AdminFooter />
+      <div className="admin_Footer">
+        <AdminFooter />
+      </div>
     </div>
   </>
 

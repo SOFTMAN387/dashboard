@@ -14,12 +14,14 @@ const AdminIndex = () => {
       <div className='AdminIndex'>
         <AdminHeader />
         <Space className="SideMenuAndPageContent">
-          <AdminSideMenu />
+          <AdminSideMenu className="SideMenu" />
           <AdminHome />
           <AdminContents />
         </Space>
-      
-        <AdminFooter />
+        <div className="admin_Footer">
+        <AdminFooter  />
+        </div>
+     
       </div>
     </>
   )

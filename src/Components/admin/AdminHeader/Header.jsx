@@ -5,8 +5,8 @@ const Header = () => {
   return (
     <>
       <div className='AdminHeader'>
-        <Image width={40}
-          src=""
+        <Image width={40} style={{borderRadius:"50%"}}
+          src="/images/manishgupta.jpg"
         > </Image>
         <Typography.Text level={4}>SoftMan DashBoard</Typography.Text>
         <Space >

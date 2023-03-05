@@ -22,13 +22,11 @@
     border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-.SideMenu {
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-}
-
 .SideMenuVertical {
-    height: 100%;
+    background-color: rgb(245, 245, 245);
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
 }
 
 .SideMenuAndPageContent {
@@ -36,8 +34,24 @@
     flex: 1;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 100vh;
 }
 
 .PageContent {
     padding-left: 12px;
+}
+
+@media(max-width:500px) {
+    .admin_Footer {
+        visibility: hidden;
+    }
+    .AdminHeader {
+        border-bottom: none;
+    }
+    .AdminFooter {
+        border-top: none;
+    }
+    .SideMenuVertical {
+        background-color: white;
+    }
 }
